@@ -1,3 +1,5 @@
+Pipfile.lock
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -102,3 +104,21 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# IDA
+*.id?
+*.til
+*.nam
+
+## Processor related
+*.*32
+*.*64
+*.*ARM
+
+## pwntools
+/pwntools/
+/pwn/
+
+# Backups
+*.*~
+
