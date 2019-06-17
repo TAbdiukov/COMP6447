@@ -1,0 +1,6 @@
+
+Blind:
+FLAG COMP6447{4R3_U_BL1ND?}
+
+Our win (IDA): win	00000000080484D6	
+
