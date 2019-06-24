@@ -3,11 +3,13 @@ Public contents I publish on COMP6447
 
 ## Contents
 
-🎩 Black hat: public materials produced by black hat activists which are hence legal to share
+
+🌃 SecBooks: Security related material (all legal)
+|_ 🎩 Black hat: public materials produced by black hat activists which are hence legal to share
 
 🚀️ Wargames: Anything wargames related. Always published AFTER due date
 
-💝 IDA: IDA related. Coming soon
+💝 IDA: IDA related. More soon
 
 ## Friendly repos
 
@@ -38,3 +40,4 @@ Windows | d19d34bfc609e28cbfd92c1468c330d032130ec3 | [idafree70_windows.exe](htt
 ###### How to unpack MAC version?
 
 By far the best way is to get a physical MAC, install app and extract contents. One possible candidate to will have been extracting MAC installer is [here](https://github.com/Bioruebe/UniExtract2/issues/52).
+
