@@ -11,6 +11,8 @@ Public contents I publish on COMP6447
 
 💝 IDA: IDA related. More soon
 
+🚪 ️Midsem: midsem stuff
+
 ## Friendly repos
 
 * [**Secedu**'s exam solutions 2018](https://github.com/secedu/comp6447-exam-solutions)
