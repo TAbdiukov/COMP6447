@@ -5,7 +5,11 @@ Public contents I publish on COMP6447
 
 
 🌃 SecBooks: Security related material (all legal)
+
 |_ 🎩 Black hat: public materials produced by black hat activists which are hence legal to share
+
+|_ 💔[Designing BSD rootkits](http://val.bmstu.ru/unix/Books/) - Gotta do the cooking by the book
+
 
 🚀️ Wargames: Anything wargames related. Always published AFTER due date
 

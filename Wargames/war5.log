@@ -1,0 +1,41 @@
+!.LOG
+
+flag:                  ASCII text
+python4.c:             C source, ASCII text
+re.png:                PNG image data, 206 x 494, 8-bit/color RGB, non-interlaced
+* shellcrack:            ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-, for GNU/Linux 3.2.0, BuildID[sha1]=1a53a0aa62ea610a06b85b6ba388ff2ea4fe1a9d, not stripped
+* stack-dump2:           ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-, for GNU/Linux 3.2.0, BuildID[sha1]=5318c4c46af9f27b0acc9cfdeb09664c4514de8a, not stripped
+wargame5.zip:          Zip archive data, at least v2.0 to extract
+web_server.c:          C source, ASCII text
+
+Stuff is 32 bit -> IDA 32
+
+shellcrack:
+* no win(). 
+* gets() -> yo
+* check_canary -> canary present
+
+
+printf("Canary '%.8s' modified from global canary '%s'! Buffer overflow detected!\n", s1, &global_canary);
+
+GDB ret addr in stack
+
+00:0000│ esp  0xffffd524 —▸ 0x565558a4 (main+18) ◂— mov    eax, 0
+00:0000│ esp  0xffffd524 —▸ 0x565558a4 (main+18) ◂— mov    eax, 0
+00:0000│ esp  0xffffd524 —▸ 0x565558a4 (main+18) ◂— mov    eax, 0
+
+
+"Write your data to the buffer[0xffffd4dc]."
+"Write your data to the buffer[0xffffd4dc]."
+
+* GDB disables randomisation: Turning that off...
+
+OLD
+"Write your data to the buffer[0xffffd4dc]."
+00:0000│ esp  0xffffd524 —▸ 0x565558a4 (main+18) ◂— mov    eax, 0
+hex(0xffffd524 - 0xffffd4dc) = 0x48
+
+NEW
+Write your data to the buffer[0xffbeda4c].
+00:0000│ esp  0xffbeda94 —▸ 0x566448a4 (main+18) ◂— mov    eax, 0
+hex(0xffbeda94-0xffbeda4c)= 0x48
