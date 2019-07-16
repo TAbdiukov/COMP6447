@@ -1,0 +1,32 @@
+# 1 file
+
+./stack-dump2: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=5318c4c46af9f27b0acc9cfdeb09664c4514de8a, not stripped
+
+
+# 2 runtime
+
+z5214048@piano10:~/COMP6447/Wargames$ ./stack-dump2
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+Lets try a real stack canary, like the ones GCC uses
+But this time, lets enable ALL protections and make the stack non-executable!
+To make things easier, here's a useful stack pointer 0xff965c97
+a) input data
+b) dump memory
+c) print memory map
+d) quit
+
+c
+ff947000-ff968000 rw-p 00000000 00:00 0                                  [stack]
+
+# 3 - IDA reckon
+* win() here
+* no "gets()"
+
+
+# 4 - func reckon
+* D) sys exit: main++992 -> (main++2450) 
+	->> *(main+204) ->> *(main+516)
+
+	
+# 5 - Test runs
+
