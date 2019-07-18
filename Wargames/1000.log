@@ -1,0 +1,12 @@
+Yay you connected!
+If you connected WITHOUT using pwntools, please exit and do that first!
+Lets see if you can strip out this address: {0x1337}
+Now send it back to me in decimal form!
+You sent: GET / HTTP/1.1
+
+Maybe next time!
+
+Now send it back to me in hex form MINUS 0x103!
+You sent: 0x1234Now send me 0x1337 in little endian form!
+
+NOTE: key is ######
