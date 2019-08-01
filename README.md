@@ -26,6 +26,8 @@ Public contents I publish on COMP6447
 
 ## IDA
 
+![NSA](./1518803580320.jpg "IDA")
+
 ### Legal/Free
 
 #### 5.0
