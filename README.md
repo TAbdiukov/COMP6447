@@ -8,7 +8,7 @@ Public contents I publish on COMP6447
 
 |_ 🎩 Black hat: public materials produced by black hat activists which are hence legal to share
 
-|_ 💔[Designing BSD rootkits](http://val.bmstu.ru/unix/Books/) - Gotta do the cooking by the book
+|_ 💔[Designing BSD rootkits](https://raw.githubusercontent.com/colavs19/bcit-courses/master/COMP%208045%20-%20Major%20Project/Reference%20Documents/Designing%20BSD%20Rootkits%20-%20An%20Introduction%20to%20Kernel%20Hacking.pdf) - Gotta do the cooking by the book
 
 
 🚀️ Wargames: Anything wargames related. Always published AFTER due date
