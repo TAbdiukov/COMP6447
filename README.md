@@ -1,21 +1,20 @@
-# COMP6447-public
-Public contents I publish on COMP6447
+# COMP6447-Public
 
 ## Contents
 
 
-🌃 SecBooks: Security related material (all legal)
+🌃 SecBooks: Security related material
 
-|_ 🎩 Black hat: public materials produced by black hat activists which are hence legal to share
+|_ 🎩 Black hat.
 
-|_ 💔[Designing BSD rootkits](https://raw.githubusercontent.com/colavs19/bcit-courses/master/COMP%208045%20-%20Major%20Project/Reference%20Documents/Designing%20BSD%20Rootkits%20-%20An%20Introduction%20to%20Kernel%20Hacking.pdf) - Gotta do the cooking by the book
+|_ 💔[Designing BSD rootkits](https://raw.githubusercontent.com/colavs19/bcit-courses/master/COMP%208045%20-%20Major%20Project/Reference%20Documents/Designing%20BSD%20Rootkits%20-%20An%20Introduction%20to%20Kernel%20Hacking.pdf) - Cooking by the book
 
 
 🚀️ Wargames: Anything wargames related. Always published AFTER due date
 
-💝 IDA: IDA related. More soon
+💝 IDA.
 
-🚪 ️Midsem: midsem stuff
+🚪 ️Midsem.
 
 ## Friendly repos
 
@@ -39,13 +38,8 @@ Public contents I publish on COMP6447
 #### 7.0
 ##### [7.0 Multi](https://www.hex-rays.com/products/ida/support/download_freeware.shtml)
 
-OS | SHA1 | File
----|---|---
-Linux | a3ead6ddf62782dc9ee725df4393d7df42958389 | [idafree70_linux.run](https://out7.hex-rays.com/files/idafree70_linux.run)
-MAC | c5f5d36535fae01212887f3bf8d908d53be74afd | [idafree70_mac.tgz](https://out7.hex-rays.com/files/idafree70_mac.tgz)
-Windows | d19d34bfc609e28cbfd92c1468c330d032130ec3 | [idafree70_windows.exe](https://out7.hex-rays.com/files/idafree70_windows.exe)
-
-###### How to unpack MAC version?
-
-By far the best way is to get a physical MAC, install app and extract contents. One possible candidate to will have been extracting MAC installer is [here](https://github.com/Bioruebe/UniExtract2/issues/52).
-
+OS | File
+---|---
+Linux  | [idafree70_linux.run](https://out7.hex-rays.com/files/idafree70_linux.run)
+MAC | [idafree70_mac.tgz](https://out7.hex-rays.com/files/idafree70_mac.tgz)
+Windows | [idafree70_windows.exe](https://out7.hex-rays.com/files/idafree70_windows.exe)
