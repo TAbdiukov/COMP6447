@@ -11,6 +11,7 @@
 
 |_ 💔[Designing BSD rootkits](https://raw.githubusercontent.com/colavs19/bcit-courses/master/COMP%208045%20-%20Major%20Project/Reference%20Documents/Designing%20BSD%20Rootkits%20-%20An%20Introduction%20to%20Kernel%20Hacking.pdf) - Cooking by the book
 
+------------------------------------------------
 
 🚀️ Wargames: Anything wargames related. Always published AFTER due date
 
