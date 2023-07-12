@@ -5,6 +5,8 @@
 
 # COMP6447-Core
 
+These tools and gadgets were not optimized much and were written on-the-fly to meet the demand.
+
 🌃 SecBooks: Security related material
 
 |_ 🎩 Black hat.
