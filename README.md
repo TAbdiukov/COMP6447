@@ -1,11 +1,8 @@
 ![bxi.es](./misc/header.jpg)
 
-__COMP6447__: [Core](https://github.com/TAbdiukov/COMP6447-public) | [Rootkit](https://github.com/TAbdiukov/COMP6447-Rootkit)
+__COMP6447__: [Core](https://github.com/TAbdiukov/COMP6447-Core) | [Rootkit](https://github.com/TAbdiukov/COMP6447-Rootkit)
 
-# COMP6447-Public
-
-## Contents
-
+# COMP6447-Core
 
 🌃 SecBooks: Security related material
 
