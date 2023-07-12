@@ -1,11 +1,8 @@
-# EXAM
-![tightrope](https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/3907445616.jpg)
->
->
->
-Handy exam stuff
+# COMP6447 Exam
 
-## Filezzz
+*Handy!*
+
+## Files
 
 File | Desc | Author 
 ---- | ---- | ----
