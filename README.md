@@ -1,8 +1,8 @@
-# COMP6447-Public
-
 ![bxi.es](./misc/header.jpg)
 
-__COMP6447__: [Public](https://github.com/TAbdiukov/COMP6447-public) | ...
+__COMP6447__: [Core](https://github.com/TAbdiukov/COMP6447-public) | [Rootkit](https://github.com/TAbdiukov/COMP6447-Rootkit)
+
+# COMP6447-Public
 
 ## Contents
 
