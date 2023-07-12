@@ -20,6 +20,8 @@ __COMP6447__: [Public](https://github.com/TAbdiukov/COMP6447-public) | ...
 
 🚪 ️Midsem.
 
+🚪 ️Exam.
+
 ## Friendly repos
 
 * [**SecEDU**'s exam solutions 2018](https://github.com/secedu/comp6447-exam-solutions)
