@@ -1,5 +1,7 @@
 # COMP6447-Public
 
+
+
 ## Contents
 
 
@@ -25,7 +27,7 @@
 
 ## IDA
 
-![NSA](./1518803580320.jpg "IDA")
+![NSA](./misc/1518803580320.jpg "IDA")
 
 ### 5.0
 #### [5.0 Windows](https://www.scummvm.org/news/20180331/)
